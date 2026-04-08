@@ -18,7 +18,7 @@ use vcc_gnd_yd_rp2040::{
 
 #[entry] // Начало работы прошивки.
 fn main() -> ! {
-    let mut pac = pac::Peripherals::take().unwrap(); // Видимо тут мы подключаемся к переферии то есть к vcc_gnd_yd_rp2040 пинам чтобы не подключатся вручную
+    let mut pac = pac::Peripherals::take().unwrap(); // тут мы подключаемся к переферии то есть к vcc_gnd_yd_rp2040 пинам чтобы не подключатся вручную
     let core = pac::CorePeripherals::take().unwrap();
 
     let mut watchdog = Watchdog::new(pac.WATCHDOG);
